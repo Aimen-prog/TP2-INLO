@@ -11,4 +11,4 @@ from select_fasta_parser import main_parser
 
 
 if __name__ == "__main__":
-    main()
+    main_parser()
