@@ -15,7 +15,7 @@ def create_parser():
     help="required input file in fasta format",type=argparse.FileType("r"),required=True)
     return parser
 
-def main():
+def main_parser():
     """ Main function for reading fasta file and checking sequence format """
     parser = create_parser()
     args = parser.parse_args()
