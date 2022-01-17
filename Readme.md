@@ -8,8 +8,8 @@ Ce TP a été réalisé dans le cadre de l'UE INLO.
 
 **Mode d'emploi**
 <br>
-Ce programme vérifie si une chaine ADN est valide ou invalide. Sur cette base, ce programme vérifie pour chaque séquence d'un fichier
-fasta si la séquence est valide ou pas. Si oui il affiche l'identifiant de la séquence accompagné du  status "valide" et indique 
+Ce programme vérifie pour chaque séquence d'un fichier fasta si la séquence est valide ou pas. 
+Si oui il affiche l'identifiant de la séquence accompagné du  status "valide" et indique 
 la longueur de la séquence. Sinon il affiche l'identifiant de la séquence accompagné du  status "invalide", indique sa longueur, reporte
 la premiére erreur ( premier faux caractére ) et sa position dans la séquence.     
 
@@ -38,8 +38,10 @@ La librairie *adn.py*
 Le programme *select_fasta_parser.py* 
 <br>
 Ce programme est un parser de fichier.
-<br> 
 Utilise les fonctions de la librairie adn.py pour vérifier qu'un fichier fasta (-i "fichier.fasta") est bien sous forme de nucléotides
+
+<br>
+Le programme principal (main.py) exécute le tout.
 
 
 
