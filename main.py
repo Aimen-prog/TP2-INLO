@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-    This main calls for adn.py functions to verify the if an input is dna
+    This main calls for select_fasta_parser functions to verify if a fasta file 
+    is valid/invalid.
 """
 
 __author__ = 'Aimen CHERIF'
 
-from adn import *
+from select_fasta_parser import create_parser, main 
 
-if __name__ == "__main__":  
-    
-    check_fasta(get_fasta("exemple.fasta"))
-    #get_valid_adn()
+
+if __name__ == "__main__":
+    main()
