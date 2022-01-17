@@ -23,6 +23,3 @@ def main():
     fasta_input = args["inputfile"].name #get input name
     check_fasta(get_fasta(fasta_input))
 
-
-if __name__ == "__main__":
-    main()
