@@ -98,18 +98,21 @@ def get_fasta(fasta_file) :
     dico = {}
     with open(fasta_file,"r") as fasta:
         current = ""
-        for line in fasta:   #loops through every line in the file
-            line = line.strip()
-            if line == "":          #if a line is empty,it ignores it.
-                continue
-            if line[0] == ">":    #if a line starts with ">"
-                dico[line] = ""   #set id as key and value to empty until we find dna
-                current = line
-            else :             #if line isn't empty and doesn't start with ">"
-                if dico[current] == "" : #if it's first dna line of the id add it
-                    dico[current] = line
-                else:                     #same id and value not empty, add it to value
-                    dico[current] +=line
+        try :
+            for line in fasta:   #loops through every line in the file
+                line = line.strip()
+                if line == "":          #if a line is empty,it ignores it.
+                    continue
+                if line[0] == ">":    #if a line starts with ">"
+                    dico[line] = ""   #set id as key and value to empty until we find dna
+                    current = line
+                else :             #if line isn't empty and doesn't start with ">"
+                    if dico[current] == "" : #if it's first dna line of the id add it
+                        dico[current] = line
+                    else:                    #same id and value not empty, add it to value
+                        dico[current] +=line
+        except :
+            dico is False #it's not a fasta file
     return dico
 
 """
@@ -137,4 +140,4 @@ def check_fasta(dico) :
             print("Toutes les séquences du fichier fasta sont valides.")
 
     else :  #if a dictionary is empty
-        print("Le fichier fasta est vide.")
+        print("Le fichier fasta est vide et/ou n'est pas sous forme fasta.")
